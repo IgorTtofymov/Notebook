@@ -1,0 +1,12 @@
+﻿
+.containerMain aside{
+    background-color:grey;
+    width:20%;
+    float:left;
+}
+
+.containerMain div{
+    background-color:orangered;
+    width:80%;
+    float:left;
+}
