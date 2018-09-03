@@ -1,12 +1,24 @@
 ﻿
 .containerMain aside{
     background-color:grey;
-    width:20%;
+    width:17%;
+    height:510px;
     float:left;
 }
+.containerMain .secondClass{
+    background-color: #a6f6f6;
+    width: 3%;
+    float: left;
+    height: 510px;
+}
+.containerMain .renderContainer {
+    background-color: #a6f6f6;
+    width: 80%;
+    height: 510px;
+    float: left;
+}
 
-.containerMain div{
-    background-color:orangered;
-    width:80%;
+.filter div{
+    width:20%;
     float:left;
 }

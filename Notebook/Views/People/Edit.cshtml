@@ -2,7 +2,6 @@
 
 @{
     ViewBag.Title = "Edit";
-    Layout = "~/Views/Shared/_Person.cshtml";
 }
 
 <h2>Edit</h2>
@@ -11,7 +10,7 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Person</h4>
         <hr />
@@ -43,12 +42,21 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.ComanyId, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Company.Name, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.ComanyId, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.ComanyId, "", new { @class = "text-danger" })
+                @Html.DropDownListFor(m => m.CompanyId, ViewBag.Companies as SelectList)
+                @{ TempData.Keep();}
             </div>
         </div>
+
+        @Html.Label("Skills", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @foreach (var skill in ViewBag.Skills)
+            {
+                <input type="checkbox" name="selectedSkills" value="@skill.Id" @(Model.Skills.Contains(skill) ? "checked=\"checked\"" : "") />@skill.Name<br />
+            }
+        </div>
+
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">

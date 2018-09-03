@@ -2,8 +2,6 @@
 
 @{
     ViewBag.Title = "Delete";
-
-    Layout = "~/Views/Shared/_Person.cshtml";
 }
 
 <h2>Delete</h2>
@@ -38,11 +36,25 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.ComanyId)
+            @Html.DisplayNameFor(model => model.Company)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.ComanyId)
+            @Html.DisplayFor(model => model.Company.Name)
+        </dd>
+
+        <dt>
+            Skills
+        </dt>
+        <dd>
+            <ul>
+                @{
+                foreach (var skill in Model.Skills)
+                {
+                    <li>@skill.Name</li>
+            }
+                }
+            </ul>
         </dd>
 
     </dl>

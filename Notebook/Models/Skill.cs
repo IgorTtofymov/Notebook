@@ -11,7 +11,7 @@ namespace Notebook.Models
         public string Name { get; set; }
         public string Description { get; set; }
 
-        public ICollection<Person> People { get; set; }
+        public virtual ICollection<Person> People { get; set; }
         public Skill()
         {
             People = new List<Person>();

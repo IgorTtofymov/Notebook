@@ -15,10 +15,10 @@ namespace Notebook.Models
         
         public int PhoneNumber { get; set; }
 
-        public ICollection<Skill> Skills { get; set; }
+        public virtual ICollection<Skill> Skills { get; set; }
 
         public int? CompanyId { get; set; }
-        public Company Company { get; set; }
+        public virtual Company Company { get; set; }
 
         public Person()
         {

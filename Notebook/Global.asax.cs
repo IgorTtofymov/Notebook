@@ -14,7 +14,7 @@ namespace Notebook
     {
         protected void Application_Start()
         {
-            Database.SetInitializer<PersonDbContext>(new Initilizer());
+            //Database.SetInitializer<PersonDbContext>(new Initilizer());
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

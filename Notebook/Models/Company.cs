@@ -10,7 +10,7 @@ namespace Notebook.Models
         public int Id { get; set; }
         public string Name { get; set; }
         
-        public ICollection<Person> People { get; set; }
+        public virtual ICollection<Person> People { get; set; }
         public Company()
         {
             People = new List<Person>();
